@@ -1,32 +1,64 @@
+.flex {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    width: 36vw;
+    gap: 0.5rem;
+    background-color: lightblue;
+
+}
+
 .app-container {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 1rem;
     margin: 4rem auto;
+}
+
+.player-amount {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
 }
 
 .word-container {
     background-color: lightblue;
-    padding: 2rem 4rem;
-    width: fit-content;
     margin: auto;
+    padding: 1rem 2rem;
     border-radius: 8px;
-    min-width: 30vw;
+    width: 36vw;
+    text-align: center;
 }
 
 .senses-container {
     display: flex;
-    margin: auto;
+    margin: 2rem auto;
 }
 
 .sense-circle {
     display: flex;
-    aspect-ratio: 1 / 1;
     border-radius: 999px;
+    font-weight: bold;
     width: 5rem;
+    height: 5rem;
     justify-content: center;
     align-items: center;
-    margin: -0.2rem;
+    margin: -1.5rem;
+    mix-blend-mode: screen;
+    isolation: isolate;
+}
+
+.sense-circle:nth-child(2), .sense-circle:nth-child(4){
+    margin-top: 2.20rem ;
 }
 
 .See {

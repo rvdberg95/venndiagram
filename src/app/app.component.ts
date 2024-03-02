@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { CommonModule } from '@angular/common';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
+  imports: [RouterOutlet, FormsModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
@@ -15,12 +16,25 @@ export class AppComponent {
   wordlist = [
     {word: 'Fire', category: 'Object', difficulty: 'easy'}, 
     {word: 'Water', category: 'Object', difficulty: 'easy'}, 
-    {word: 'Cinema', category: 'Object', difficulty: 'easy'}, 
-    {word: 'Library', category: 'Object', difficulty: 'easy'}, 
-    {word: 'Rainbow', category: 'Object', difficulty: 'easy'}, 
+    {word: 'Cinema', category: 'Place', difficulty: 'easy'}, 
+    {word: 'Library', category: 'Place', difficulty: 'easy'}, 
+    {word: 'Rainbow', category: 'Thing', difficulty: 'easy'}, 
     {word: 'Mountain', category: 'Object', difficulty: 'easy'}, 
     {word: 'Painting', category: 'Object', difficulty: 'easy'}, 
-    // "Telescope",
+    {word: 'Coffee', category: 'Object', difficulty: 'easy'}, 
+    {word: 'Pineapple', category: 'Object', difficulty: 'easy'}, 
+    {word: 'Lemon', category: 'Object', difficulty: 'easy'}, 
+    {word: 'Perfume', category: 'Object', difficulty: 'easy'}, 
+    {word: 'Campfire', category: 'Object', difficulty: 'easy'}, 
+    {word: 'Chocolate', category: 'Object', difficulty: 'easy'}, 
+    {word: 'Love', category: 'Feeling', difficulty: 'easy'}, 
+    {word: 'Thunder', category: 'Object', difficulty: 'easy'}, 
+    {word: 'Spicy', category: 'Adjective', difficulty: 'easy'}, 
+    {word: 'Rose', category: 'Object', difficulty: 'easy'}, 
+    {word: 'Beer', category: 'Food & Drinks', difficulty: 'easy'}, 
+    {word: 'Sheep', category: 'Animals', difficulty: 'easy'}, 
+    {word: 'Rose', category: 'Object', difficulty: 'easy'}, 
+    {word: 'Rose', category: 'Object', difficulty: 'easy'}, 
     // "Symphony",
     // "Thunder",
     // "Whisper",
@@ -31,15 +45,9 @@ export class AppComponent {
     // "Feather",
     // "Ice",
     // "Bubble",
-    // "Lemon",
-    // "Chocolate",
     // "Spicy",
     // "Mint",
-    // "Pineapple",
     // "Rose",
-    // "Coffee",
-    // "Perfume",
-    // "Campfire",
     // "Freshly Baked Bread",
   ];
   randomlyChosenWord = {word: "Word", category: "category", difficulty: "difficulty"};
@@ -49,6 +57,8 @@ export class AppComponent {
   randomlyChosenSenses : string[] = [];
 
   getRandomWord() {
+    //Check playeramount
+
     this.randomlyChosenSenses = [];
     //Get random word
     var randomindex: number = Math.floor(Math.random() * this.wordlist.length);
