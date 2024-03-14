@@ -16,8 +16,8 @@ export class AppComponent {
   wordlist = [
     {word: 'Fire', category: 'Object', difficulty: 'easy'}, 
     {word: 'Water', category: 'Object', difficulty: 'easy'}, 
-    {word: 'Cinema', category: 'Place', difficulty: 'easy'}, 
-    {word: 'Library', category: 'Place', difficulty: 'easy'}, 
+    {word: 'Cinema', category: 'Location', difficulty: 'easy'}, 
+    {word: 'Library', category: 'Location', difficulty: 'easy'}, 
     {word: 'Rainbow', category: 'Thing', difficulty: 'easy'}, 
     {word: 'Mountain', category: 'Object', difficulty: 'easy'}, 
     {word: 'Painting', category: 'Object', difficulty: 'easy'}, 
